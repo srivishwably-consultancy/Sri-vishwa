@@ -86,7 +86,7 @@ export function Home() {
         <Container>
           <FadeIn className="text-center mb-20">
             <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">Expertise</h4>
-            <h2 className="text-4xl md:text-5xl font-serif">Our Areas of Practice</h2>
+            <h2 className="text-4xl md:text-5xl font-serif">Our Services</h2>
           </FadeIn>
           
           <div className="grid grid-cols-1 md:grid-cols-3 border-t border-b border-white/5">
