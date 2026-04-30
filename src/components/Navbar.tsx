@@ -32,7 +32,7 @@ export function Navbar() {
         )}
       >
         <Container className="flex items-center justify-between">
-          <Link to="/" className="text-xl md:text-2xl font-serif text-secondary tracking-widest uppercase relative z-50">
+          <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-xl md:text-2xl font-serif text-secondary tracking-widest uppercase relative z-50">
             Sri Vishwa<span className="text-[var(--color-accent)]">.</span>
           </Link>
 
