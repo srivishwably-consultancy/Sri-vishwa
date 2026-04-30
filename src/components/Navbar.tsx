@@ -32,7 +32,7 @@ export function Navbar() {
         )}
       >
         <Container className="flex items-center justify-between">
-          <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-xl md:text-2xl font-serif text-secondary tracking-widest uppercase relative z-50">
+          <Link to="/" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }} className="text-xl md:text-2xl font-serif text-secondary tracking-widest uppercase relative z-50">
             Sri Vishwa<span className="text-[var(--color-accent)]">.</span>
           </Link>
 
@@ -42,6 +42,7 @@ export function Navbar() {
               <NavLink
                 key={link.path}
                 to={link.path}
+                onClick={() => window.scrollTo(0, 0)}
                 className={({ isActive }) =>
                   cn('nav-link text-xs tracking-[0.15em] uppercase font-medium', isActive ? 'text-accent active' : 'text-secondary/70 hover:text-secondary')
                 }
@@ -81,7 +82,7 @@ export function Navbar() {
                 <NavLink
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }}
                   className={({ isActive }) =>
                     cn('text-2xl font-serif uppercase tracking-widest', isActive ? 'text-[var(--color-accent)]' : 'text-secondary')
                   }

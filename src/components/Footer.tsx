@@ -8,7 +8,7 @@ export function Footer() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <Link to="/" className="block mb-6 hover:opacity-80 transition-opacity">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="block mb-6 hover:opacity-80 transition-opacity">
               <h2 className="text-3xl font-serif uppercase tracking-widest">
                 Sri Vishwa<span className="text-[var(--color-accent)]">.</span>
               </h2>
@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.2em] text-secondary/40 font-semibold mb-6">Navigation</h4>
             <div className="flex flex-col gap-4 text-sm text-secondary/80">
-              <Link to="/" className="hover:text-accent transition-colors">Home</Link>
+              <Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors">Home</Link>
               <Link to="/about" className="hover:text-accent transition-colors">About Us</Link>
               <Link to="/services" className="hover:text-accent transition-colors">Services</Link>
               <Link to="/projects" className="hover:text-accent transition-colors">Projects</Link>
