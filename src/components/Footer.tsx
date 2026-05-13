@@ -9,9 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
             <Link to="/" onClick={() => window.scrollTo(0, 0)} className="block mb-6 hover:opacity-80 transition-opacity">
-              <h2 className="text-3xl font-serif uppercase tracking-widest">
-                Sri Vishwa<span className="text-[var(--color-accent)]">.</span>
-              </h2>
+              <img src="https://i.ibb.co/fVG3Pvrs/SVC-LOGO-web-2.png" alt="Sri Vishwa Logo" className="h-12 w-auto object-contain" />
             </Link>
             <p className="text-secondary/60 max-w-sm text-sm leading-relaxed mb-8">
               Premier design-build contractor creating visionary spaces that blend architectural excellence with structural integrity.

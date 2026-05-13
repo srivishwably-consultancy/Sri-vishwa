@@ -1,1 +1,1 @@
-fetch('https://ibb.co/ZRSh7Wg7').then(r=>r.text()).then(t => console.log(t.match(/<meta property=\"og:image\" content=\"([^\"]+)\"/)?.[1]));
+fetch('https://ibb.co/RG4XVyQq').then(r=>r.text()).then(t => console.log(t.match(/<meta property=\"og:image\" content=\"([^\"]+)\"/)?.[1]));

@@ -32,8 +32,8 @@ export function Navbar() {
         )}
       >
         <Container className="flex items-center justify-between">
-          <Link to="/" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }} className="text-xl md:text-2xl font-serif text-secondary tracking-widest uppercase relative z-50">
-            Sri Vishwa<span className="text-[var(--color-accent)]">.</span>
+          <Link to="/" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }} className="relative z-50 block hover:opacity-80 transition-opacity">
+            <img src="https://i.ibb.co/fVG3Pvrs/SVC-LOGO-web-2.png" alt="Sri Vishwa Logo" className="h-10 md:h-12 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
