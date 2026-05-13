@@ -33,7 +33,7 @@ export function Navbar() {
       >
         <Container className="flex items-center justify-between">
           <Link to="/" onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }} className="relative z-50 block hover:opacity-80 transition-opacity">
-            <img src="https://i.ibb.co/fVG3Pvrs/SVC-LOGO-web-2.png" alt="Sri Vishwa Logo" className="h-10 md:h-12 w-auto object-contain" />
+            <img src="https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/SVC_LOGO_web_2_qduowt" alt="Sri Vishwa Logo" className="h-10 md:h-12 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
