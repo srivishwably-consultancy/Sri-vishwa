@@ -11,7 +11,7 @@ export function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80" 
+            src="https://i.ibb.co/zWFSDG2D/SVC-bg-image.png" 
             alt="Luxury modern villa exterior at twilight" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -48,35 +48,18 @@ export function Home() {
       {/* About Teaser */}
       <section className="py-32 bg-[#111111]">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <FadeIn direction="right">
-              <div className="relative">
-                <div className="aspect-[3/4] md:aspect-square lg:aspect-[3/4] overflow-hidden image-mask-reveal">
-                  <img 
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
-                    alt="Architects in office" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-10 -right-10 w-48 h-48 border border-accent/20 rounded-full hidden md:block" />
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <FadeIn delay={0.2}>
+              <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">About Us</h4>
+              <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">We shape spaces that inspire living.</h2>
+              <div className="w-16 h-px bg-accent mx-auto mb-8" />
+              <p className="text-secondary/70 leading-relaxed font-light mb-10 text-lg">
+                Sri Vishwa Consultancy is a premier design-build contractor specializing in high-end residential and commercial projects. We bridge the gap between visionary architectural design and flawless structural construction, ensuring a seamless journey from concept to completion.
+              </p>
+              <Link to="/about" className="inline-flex items-center gap-4 text-xs tracking-[0.2em] uppercase font-semibold hover:text-accent transition-colors group">
+                Discover Our Story <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+              </Link>
             </FadeIn>
-            
-            <div>
-              <FadeIn delay={0.2}>
-                <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">About Us</h4>
-                <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">We shape spaces that inspire living.</h2>
-                <div className="w-16 h-px bg-accent mb-8" />
-                <p className="text-secondary/70 leading-relaxed font-light mb-10">
-                  Sri Vishwa Consultancy is a premier design-build contractor specializing in high-end residential and commercial projects. We bridge the gap between visionary architectural design and flawless structural construction, ensuring a seamless journey from concept to completion.
-                </p>
-                <Link to="/about" className="inline-flex items-center gap-4 text-xs tracking-[0.2em] uppercase font-semibold hover:text-accent transition-colors group">
-                  Discover Our Story <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-                </Link>
-              </FadeIn>
-            </div>
           </div>
         </Container>
       </section>
