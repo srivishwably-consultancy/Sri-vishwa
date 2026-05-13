@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container } from '../components/Container';
 import { FadeIn } from '../components/FadeIn';
 import { ContactSection } from '../components/ContactSection';
+import { AnimatedButton } from '../components/AnimatedButton';
 
 export function Home() {
   return (
@@ -34,12 +35,12 @@ export function Home() {
           </FadeIn>
           <FadeIn delay={0.4}>
             <div className="flex flex-col sm:flex-row gap-6 mt-8">
-              <Link to="/projects" className="bg-accent text-primary px-8 py-4 text-xs tracking-[0.2em] uppercase font-semibold hover:bg-white transition-colors duration-300">
+              <AnimatedButton to="/projects">
                 View Projects
-              </Link>
-              <Link to="/contact" className="border border-white/30 text-white px-8 py-4 text-xs tracking-[0.2em] uppercase font-semibold hover:border-accent hover:text-accent transition-colors duration-300">
+              </AnimatedButton>
+              <AnimatedButton to="/contact" className="!bg-transparent border border-white/30 hover:border-accent" showArrow={false}>
                 Consult With Us
-              </Link>
+              </AnimatedButton>
             </div>
           </FadeIn>
         </Container>
@@ -56,9 +57,9 @@ export function Home() {
               <p className="text-secondary/70 leading-relaxed font-light mb-10 text-lg">
                 Sri Vishwa Consultancy is a premier design-build contractor specializing in high-end residential and commercial projects. We bridge the gap between visionary architectural design and flawless structural construction, ensuring a seamless journey from concept to completion.
               </p>
-              <Link to="/about" className="inline-flex items-center gap-4 text-xs tracking-[0.2em] uppercase font-semibold hover:text-accent transition-colors group">
-                Discover Our Story <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-              </Link>
+              <AnimatedButton to="/about">
+                Discover Our Story
+              </AnimatedButton>
             </FadeIn>
           </div>
         </Container>
@@ -97,9 +98,9 @@ export function Home() {
               <h2 className="text-4xl md:text-6xl font-serif">Featured Projects</h2>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <Link to="/projects" className="inline-flex items-center gap-4 text-xs tracking-[0.2em] uppercase hover:text-accent transition-colors group pb-2 border-b border-white/20 hover:border-accent">
+              <AnimatedButton to="/projects">
                 View All Works
-              </Link>
+              </AnimatedButton>
             </FadeIn>
           </div>
 

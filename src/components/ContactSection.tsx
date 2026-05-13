@@ -1,5 +1,6 @@
 import { Container } from './Container';
 import { FadeIn } from './FadeIn';
+import { AnimatedButton } from './AnimatedButton';
 
 export function ContactSection() {
   return (
@@ -53,9 +54,9 @@ export function ContactSection() {
                 <label htmlFor="message" className="text-xs uppercase tracking-widest text-secondary/60">Message</label>
                 <textarea id="message" rows={4} className="w-full bg-transparent border-b border-white/20 focus:border-accent outline-none py-2 text-white font-light transition-colors resize-none" />
               </div>
-              <button type="button" className="w-full bg-accent text-primary px-8 py-4 text-xs tracking-[0.2em] uppercase font-semibold hover:bg-white transition-colors duration-300">
+              <AnimatedButton className="w-full">
                 Send Message
-              </button>
+              </AnimatedButton>
             </form>
           </FadeIn>
         </div>
