@@ -10,7 +10,6 @@ const LINKS = [
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
   { name: 'Projects', path: '/projects' }, // Add a projects section/page later or link
-  { name: 'Blog', path: '/blog' },
 ];
 
 export function Navbar() {
