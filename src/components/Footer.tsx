@@ -15,8 +15,8 @@ export function Footer() {
               Premier design-build contractor creating visionary spaces that blend architectural excellence with structural integrity.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 border border-white/10 rounded-full text-secondary/60 hover:text-accent hover:border-accent transition-colors"><Instagram size={18} /></a>
-              <a href="#" className="p-2 border border-white/10 rounded-full text-secondary/60 hover:text-accent hover:border-accent transition-colors"><Linkedin size={18} /></a>
+              <a href="https://www.instagram.com/srivishwaballari" target="_blank" rel="noopener noreferrer" className="p-2 border border-white/10 rounded-full text-secondary/60 hover:text-accent hover:border-accent transition-colors"><Instagram size={18} /></a>
+              <a href="https://www.linkedin.com/in/kshreyas-civil" target="_blank" rel="noopener noreferrer" className="p-2 border border-white/10 rounded-full text-secondary/60 hover:text-accent hover:border-accent transition-colors"><Linkedin size={18} /></a>
               <a href="#" className="p-2 border border-white/10 rounded-full text-secondary/60 hover:text-accent hover:border-accent transition-colors"><Twitter size={18} /></a>
             </div>
           </div>
@@ -25,7 +25,11 @@ export function Footer() {
             <h4 className="text-xs uppercase tracking-[0.2em] text-secondary/40 font-semibold mb-6">Navigation</h4>
             <div className="flex flex-col gap-4 text-sm text-secondary/80">
               <Link to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors">Home</Link>
-              <Link to="/about" className="hover:text-accent transition-colors">About Us</Link>
+              <Link to="/#about-us" onClick={() => {
+                setTimeout(() => {
+                  document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }} className="hover:text-accent transition-colors">About Us</Link>
               <Link to="/services" className="hover:text-accent transition-colors">Services</Link>
               <Link to="/projects" className="hover:text-accent transition-colors">Projects</Link>
             </div>

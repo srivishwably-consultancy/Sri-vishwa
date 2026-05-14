@@ -6,17 +6,17 @@ export function Services() {
     {
       title: "Architectural Design",
       desc: "Our architectural designs focus on sustainability, spatial fluidity, and striking aesthetics. We translate your vision into precise blueprints that respect both the environment and your lifestyle.",
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80"
+      img: "https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/front1_p9vwzj"
     },
     {
       title: "Construction Engineering",
       desc: "We bring designs to reality with rigorous engineering and master craftsmanship. Our build teams are integrated directly with our design teams to ensure impeccable execution.",
-      img: "https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      img: "https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/Untitled_design_4_l9gays"
     },
     {
-      title: "Interior Architecture",
+      title: "Interior Styling",
       desc: "The soul of a building lies in its interiors. We select premium materials, bespoke furnishings, and design custom lighting schemes to create immersive environments.",
-      img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2067&q=80"
+      img: "https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/Untitled_design_3_wpeeme"
     }
   ];
 

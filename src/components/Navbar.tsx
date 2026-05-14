@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const LINKS = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
+  { name: 'About', path: '/#about-us' },
   { name: 'Services', path: '/services' },
   { name: 'Projects', path: '/projects' }, // Add a projects section/page later or link
 ];
@@ -41,7 +41,15 @@ export function Navbar() {
               <NavLink
                 key={link.path}
                 to={link.path}
-                onClick={() => window.scrollTo(0, 0)}
+                onClick={() => {
+                  if (link.path.includes('#')) {
+                    setTimeout(() => {
+                      document.getElementById(link.path.split('#')[1])?.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                  } else {
+                    window.scrollTo(0, 0);
+                  }
+                }}
                 className={({ isActive }) =>
                   cn('nav-link text-xs tracking-[0.15em] uppercase font-medium', isActive ? 'text-accent active' : 'text-secondary/70 hover:text-secondary')
                 }
@@ -81,7 +89,16 @@ export function Navbar() {
                 <NavLink
                   key={link.path}
                   to={link.path}
-                  onClick={() => { setIsMobileMenuOpen(false); window.scrollTo(0, 0); }}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    if (link.path.includes('#')) {
+                      setTimeout(() => {
+                        document.getElementById(link.path.split('#')[1])?.scrollIntoView({ behavior: 'smooth' });
+                      }, 100);
+                    } else {
+                      window.scrollTo(0, 0);
+                    }
+                  }}
                   className={({ isActive }) =>
                     cn('text-2xl font-serif uppercase tracking-widest', isActive ? 'text-[var(--color-accent)]' : 'text-secondary')
                   }
