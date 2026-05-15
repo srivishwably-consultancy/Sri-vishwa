@@ -1,5 +1,6 @@
 import { Container } from '../components/Container';
 import { FadeIn } from '../components/FadeIn';
+import { Link } from 'react-router-dom';
 
 export function Services() {
   const services = [
@@ -38,21 +39,40 @@ export function Services() {
       <section className="py-20">
         <Container className="space-y-32">
           {services.map((srv, idx) => (
-            <div key={idx} className={`flex flex-col md:flex-row gap-16 items-center ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-              <FadeIn className="w-full md:w-1/2" direction={idx % 2 !== 0 ? 'left' : 'right'}>
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={srv.img} alt={srv.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
-                </div>
-              </FadeIn>
-              <FadeIn className="w-full md:w-1/2" delay={0.2}>
-                <span className="text-6xl font-serif text-white/5 block mb-4">0{idx + 1}</span>
-                <h2 className="text-3xl font-serif mb-6">{srv.title}</h2>
-                <div className="w-12 h-px bg-accent mb-6" />
-                <p className="text-secondary/70 font-light leading-relaxed mb-8">{srv.desc}</p>
-                <button className="border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors">
-                  Learn More
-                </button>
-              </FadeIn>
+            <div key={idx} className="space-y-16">
+              <div className={`flex flex-col md:flex-row gap-16 items-center ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+                <FadeIn className="w-full md:w-1/2" direction={idx % 2 !== 0 ? 'left' : 'right'}>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={srv.img} alt={srv.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
+                  </div>
+                </FadeIn>
+                <FadeIn className="w-full md:w-1/2" delay={0.2}>
+                  <span className="text-6xl font-serif text-white/5 block mb-4">0{idx + 1}</span>
+                  <h2 className="text-3xl font-serif mb-6">{srv.title}</h2>
+                  <div className="w-12 h-px bg-accent mb-6" />
+                  <p className="text-secondary/70 font-light leading-relaxed mb-8">{srv.desc}</p>
+                  
+                  {srv.title === "Interior Styling" ? (
+                    <Link 
+                      to="/services/interior-styling"
+                      className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                  ) : srv.title === "Architectural Design" ? (
+                    <Link 
+                      to="/services/architectural-design"
+                      className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                  ) : (
+                    <button className="border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors">
+                      Learn More
+                    </button>
+                  )}
+                </FadeIn>
+              </div>
             </div>
           ))}
         </Container>

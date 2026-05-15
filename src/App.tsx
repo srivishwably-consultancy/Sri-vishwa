@@ -7,6 +7,10 @@ import { Home } from './pages/Home';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { Projects } from './pages/Projects';
+import { InteriorStyling } from './pages/InteriorStyling';
+import { ArchitecturalDesign } from './pages/ArchitecturalDesign';
+import { DesignProject1 } from './pages/DesignProject1';
+import { DesignProject2 } from './pages/DesignProject2';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -30,6 +34,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/interior-styling" element={<InteriorStyling />} />
+            <Route path="/services/architectural-design" element={<ArchitecturalDesign />} />
+            <Route path="/services/architectural-design/project-1" element={<DesignProject1 />} />
+            <Route path="/services/architectural-design/project-2" element={<DesignProject2 />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<Projects />} />
