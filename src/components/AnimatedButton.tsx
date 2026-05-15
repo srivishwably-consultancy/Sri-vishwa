@@ -9,9 +9,10 @@ interface AnimatedButtonProps {
   children: React.ReactNode;
   className?: string;
   showArrow?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
-export function AnimatedButton({ to, onClick, children, className = '', showArrow = true }: AnimatedButtonProps) {
+export function AnimatedButton({ to, onClick, children, className = '', showArrow = true, type = 'button' }: AnimatedButtonProps) {
   const content = (
     <>
       <i className="verd-cta-shimmer"></i>
@@ -33,7 +34,7 @@ export function AnimatedButton({ to, onClick, children, className = '', showArro
   }
 
   return (
-    <button onClick={onClick} className={`verd-cta-btn ${className}`}>
+    <button type={type} onClick={onClick} className={`verd-cta-btn ${className}`}>
       {content}
     </button>
   );

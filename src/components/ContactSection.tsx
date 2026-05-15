@@ -42,7 +42,8 @@ export function ContactSection() {
           </FadeIn>
 
           <FadeIn delay={0.2} direction="left">
-            <form className="bg-[#0a0a0a] p-8 md:p-12 border border-white/5 space-y-8">
+            <form action="https://api.web3forms.com/submit" method="POST" className="bg-[#0a0a0a] p-8 md:p-12 border border-white/5 space-y-8">
+              <input type="hidden" name="access_key" value="e4102fb4-bbb5-492a-af3f-f52ebe9d2eda" />
               <div className="space-y-2">
                 <label
                   htmlFor="name"
@@ -53,6 +54,8 @@ export function ContactSection() {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  required
                   className="w-full bg-transparent border-b border-white/20 focus:border-accent outline-none py-2 text-white font-light transition-colors"
                 />
               </div>
@@ -66,6 +69,8 @@ export function ContactSection() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   className="w-full bg-transparent border-b border-white/20 focus:border-accent outline-none py-2 text-white font-light transition-colors"
                 />
               </div>
@@ -79,6 +84,7 @@ export function ContactSection() {
                 <input
                   type="tel"
                   id="mobile"
+                  name="mobile"
                   className="w-full bg-transparent border-b border-white/20 focus:border-accent outline-none py-2 text-white font-light transition-colors"
                 />
               </div>
@@ -91,6 +97,7 @@ export function ContactSection() {
                 </label>
                 <select
                   id="interest"
+                  name="interest"
                   className="w-full bg-transparent border-b border-white/20 focus:border-accent outline-none py-2 text-white font-light transition-colors appearance-none"
                 >
                   <option className="bg-[#111111] text-accent">
@@ -116,11 +123,13 @@ export function ContactSection() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   rows={4}
                   className="w-full bg-transparent border-b border-white/20 focus:border-accent outline-none py-2 text-white font-light transition-colors resize-none"
                 />
               </div>
-              <AnimatedButton className="w-full">Send Message</AnimatedButton>
+              <AnimatedButton className="w-full" type="submit">Send Message</AnimatedButton>
             </form>
           </FadeIn>
         </div>
