@@ -12,7 +12,7 @@ export function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://i.ibb.co/zWFSDG2D/SVC-bg-image.png"
+            src="https://res.cloudinary.com/dcm8qwji0/image/upload/v1779196559/eb203d4b-0270-44b9-a6f1-fec887948680_u81uwu.png"
             alt="Luxury modern villa exterior at twilight"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
