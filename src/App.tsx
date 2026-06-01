@@ -11,6 +11,8 @@ import { InteriorStyling } from './pages/InteriorStyling';
 import { ArchitecturalDesign } from './pages/ArchitecturalDesign';
 import { DesignProject1 } from './pages/DesignProject1';
 import { DesignProject2 } from './pages/DesignProject2';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -41,6 +43,8 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<Projects />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </div>
         <Footer />

@@ -65,8 +65,8 @@ export function Footer() {
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-secondary/40">
           <p>&copy; {new Date().getFullYear()} Sri Vishwa Consultancy. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-secondary transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-secondary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </Container>

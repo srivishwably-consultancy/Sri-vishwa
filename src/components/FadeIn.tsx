@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 
 interface FadeInProps {
@@ -5,6 +6,7 @@ interface FadeInProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right';
   className?: string;
+  key?: React.Key;
 }
 
 export function FadeIn({ children, delay = 0, direction = 'up', className }: FadeInProps) {
