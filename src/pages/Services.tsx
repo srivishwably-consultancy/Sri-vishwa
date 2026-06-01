@@ -57,18 +57,18 @@ export function Services() {
                       to="/services/interior-styling"
                       className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors"
                     >
-                      Learn More
+                      View Our Work
                     </Link>
                   ) : srv.title === "Architectural Design" ? (
                     <Link 
                       to="/services/architectural-design"
                       className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors"
                     >
-                      Learn More
+                      View Our Work
                     </Link>
                   ) : (
                     <button className="border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors">
-                      Learn More
+                      View Our Work
                     </button>
                   )}
                 </FadeIn>
