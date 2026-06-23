@@ -13,6 +13,7 @@ import { InteriorStylingTVUnit } from './pages/InteriorStylingTVUnit';
 import { ArchitecturalDesign } from './pages/ArchitecturalDesign';
 import { DesignProject1 } from './pages/DesignProject1';
 import { DesignProject2 } from './pages/DesignProject2';
+import { DesignProject3 } from './pages/DesignProject3';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="/services/architectural-design" element={<ArchitecturalDesign />} />
             <Route path="/services/architectural-design/project-1" element={<DesignProject1 />} />
             <Route path="/services/architectural-design/project-2" element={<DesignProject2 />} />
+            <Route path="/services/architectural-design/project-3" element={<DesignProject3 />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<Projects />} />
