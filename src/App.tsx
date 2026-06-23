@@ -8,6 +8,8 @@ import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { Projects } from './pages/Projects';
 import { InteriorStyling } from './pages/InteriorStyling';
+import { InteriorStylingBedroom } from './pages/InteriorStylingBedroom';
+import { InteriorStylingTVUnit } from './pages/InteriorStylingTVUnit';
 import { ArchitecturalDesign } from './pages/ArchitecturalDesign';
 import { DesignProject1 } from './pages/DesignProject1';
 import { DesignProject2 } from './pages/DesignProject2';
@@ -37,6 +39,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/interior-styling" element={<InteriorStyling />} />
+            <Route path="/services/interior-styling/bedroom" element={<InteriorStylingBedroom />} />
+            <Route path="/services/interior-styling/tv-unit" element={<InteriorStylingTVUnit />} />
             <Route path="/services/architectural-design" element={<ArchitecturalDesign />} />
             <Route path="/services/architectural-design/project-1" element={<DesignProject1 />} />
             <Route path="/services/architectural-design/project-2" element={<DesignProject2 />} />
