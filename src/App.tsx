@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { LoadingScreen } from './components/LoadingScreen';
 import { Home } from './pages/Home';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
@@ -33,6 +34,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <LoadingScreen />
       <div className="flex flex-col min-h-screen bg-[#111111] text-[#f2f0e9]">
         <Navbar />
         <div className="flex-grow">

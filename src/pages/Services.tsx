@@ -1,6 +1,8 @@
 import { Container } from '../components/Container';
 import { FadeIn } from '../components/FadeIn';
 import { Link } from 'react-router-dom';
+import { FloatingParticles } from '../components/FloatingParticles';
+import { MagneticButton } from '../components/MagneticButton';
 
 export function Services() {
   const services = [
@@ -22,7 +24,10 @@ export function Services() {
   ];
 
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-32 pb-24 relative overflow-hidden bg-[#0a0a0a]">
+      {/* Cohesive anti-gravity subtle background particles */}
+      <FloatingParticles count={25} color="rgba(196, 169, 98, 0.2)" />
+      
       <section className="py-20 relative">
         <Container>
           <FadeIn>
@@ -36,14 +41,15 @@ export function Services() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <Container className="space-y-32">
           {services.map((srv, idx) => (
             <div key={idx} className="space-y-16">
               <div className={`flex flex-col md:flex-row gap-16 items-center ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                 <FadeIn className="w-full md:w-1/2" direction={idx % 2 !== 0 ? 'left' : 'right'}>
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden rounded-lg border border-white/5 shadow-2xl relative group">
                     <img src={srv.img} alt={srv.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                   </div>
                 </FadeIn>
                 <FadeIn className="w-full md:w-1/2" delay={0.2}>
@@ -52,25 +58,27 @@ export function Services() {
                   <div className="w-12 h-px bg-accent mb-6" />
                   <p className="text-secondary/70 font-light leading-relaxed mb-8">{srv.desc}</p>
                   
-                  {srv.title === "Interior Styling" ? (
-                    <Link 
-                      to="/services/interior-styling"
-                      className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors"
-                    >
-                      View Our Work
-                    </Link>
-                  ) : srv.title === "Architectural Design" ? (
-                    <Link 
-                      to="/services/architectural-design"
-                      className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors"
-                    >
-                      View Our Work
-                    </Link>
-                  ) : (
-                    <button className="border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors">
-                      View Our Work
-                    </button>
-                  )}
+                  <MagneticButton glowColor="rgba(196, 169, 98, 0.3)">
+                    {srv.title === "Interior Styling" ? (
+                      <Link 
+                        to="/services/interior-styling"
+                        className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors bg-[#111111]/60 backdrop-blur"
+                      >
+                        View Our Work
+                      </Link>
+                    ) : srv.title === "Architectural Design" ? (
+                      <Link 
+                        to="/services/architectural-design"
+                        className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors bg-[#111111]/60 backdrop-blur"
+                      >
+                        View Our Work
+                      </Link>
+                    ) : (
+                      <button className="border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors bg-[#111111]/60 backdrop-blur">
+                        View Our Work
+                      </button>
+                    )}
+                  </MagneticButton>
                 </FadeIn>
               </div>
             </div>
