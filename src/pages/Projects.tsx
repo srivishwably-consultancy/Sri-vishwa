@@ -15,13 +15,13 @@ const ALL_PROJECTS = [
   },
   {
     id: '2',
-    title: 'Aura Commercial Plaza',
+    title: 'Lokur Multi - Specialty Hospital',
     category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+    image: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784895186/1_cbcvnx.png'
   },
   {
     id: '3',
-    title: 'Villa Horizon',
+    title: 'Buildings',
     category: 'Residential',
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80'
   }
@@ -41,16 +41,56 @@ export function Projects() {
     images: [
       {
         name: 'View 1',
-        url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/1_c56eq6'
+        url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784897014/0f646268-ed51-4aa5-9ad2-f0701e07cf29_mfmnfk.png'
       },
       {
         name: 'View 2',
-        url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/2_domasn'
+        url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784897015/IMG_20260527_113940626_HDR_AE_ztvuet.jpg'
       },
       {
-        name: 'Raw Sketch',
+        name: 'View 3',
+        url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784897014/IMG_20260527_113756139_HDR_AE_pb8vra.jpg'
+      },
+      {
+        name: 'View 4',
+        url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784897014/IMG_20260527_113037836_HDR_AE_towju0.jpg'
+      },
+      {
+        name: 'Concept Image',
         url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/Screenshot_2026-05-14_175729_ipik2d'
       }
+    ]
+  };
+
+  const lokurProject = {
+    title: 'Lokur Multi - Specialty Hospital',
+    category: 'Commercial',
+    images: [
+      { name: 'View 1', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784897270/20260628_113015AMByGPSMapCamera_mhzciv.jpg' },
+      { name: 'View 2', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784897269/20260628_112953AMByGPSMapCamera_bc31ws.jpg' },
+      { name: 'View 3', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894628/IMG_20260531_110054_182_g0zus8.jpg' },
+      { name: 'View 4', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894627/IMG_20260530_185940_981_eeif4t.jpg' },
+      { name: 'View 5', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894626/IMG_20260531_121023_3_h1zyw5.jpg' },
+      { name: 'View 6', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894625/IMG_20260531_110049_453_wexy0v.jpg' },
+      { name: 'View 7', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894623/IMG_20260530_175716_6_xdvwnj.jpg' },
+      { name: 'View 8', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894622/IMG_20260530_153935_628_uvyhuj.jpg' },
+      { name: 'View 9', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894622/IMG_20260530_161127_8_othhnx.jpg' },
+      { name: 'View 10', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784894621/IMG_20260530_153227_0_yjwrkq.jpg' },
+      { name: 'View 11', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1779197341/20260401_102513AMByGPSMapCamera_efy5nh.jpg' },
+      { name: 'View 12', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1779197331/20260330_105319AMByGPSMapCamera_tg4fyq.jpg' },
+      { name: 'View 13', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1779197330/20260330_101818AMByGPSMapCamera_k5aprd.jpg' },
+      { name: 'View 14', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1779197342/20260401_102442AMByGPSMapCamera_boeyyc.jpg' }
+    ]
+  };
+
+  const buildingsProject = {
+    title: 'Buildings',
+    category: 'Residential',
+    images: [
+      { name: 'View 1', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134669/con_ngecwt.png' },
+      { name: 'View 2', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134668/side_con_r7mff1.png' },
+      { name: 'View 3', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134667/con1_zbdjxo.png' },
+      { name: 'View 4', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134667/pop_work_dps2ek.png' }
     ]
   };
 
@@ -71,6 +111,78 @@ export function Projects() {
           <div className="space-y-24">
             {bitmProject.images.map((image, index) => (
               <FadeIn key={image.name} delay={index * 0.2}>
+                <div className="flex flex-col gap-6">
+                  <div className="aspect-video w-full overflow-hidden bg-black/50">
+                    <img 
+                      src={image.url} 
+                      alt={image.name} 
+                      className="w-full h-full object-contain"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <h3 className="text-xl font-serif text-center text-secondary/80">{image.name}</h3>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </Container>
+      </main>
+    );
+  }
+
+  if (id === '2') {
+    return (
+      <main className="pt-32 pb-24 min-h-screen">
+        <Container>
+          <div className="mb-12">
+            <FadeIn>
+              <Link to="/projects" className="text-secondary/50 hover:text-accent transition-colors text-xs uppercase tracking-widest mb-6 inline-block">
+                ← Back to Projects
+              </Link>
+              <h1 className="text-4xl md:text-6xl font-serif mb-4">{lokurProject.title}</h1>
+              <p className="text-accent text-sm uppercase tracking-widest">{lokurProject.category}</p>
+            </FadeIn>
+          </div>
+          
+          <div className="space-y-24">
+            {lokurProject.images.map((image, index) => (
+              <FadeIn key={image.name} delay={index * 0.1}>
+                <div className="flex flex-col gap-6">
+                  <div className="aspect-video w-full overflow-hidden bg-black/50">
+                    <img 
+                      src={image.url} 
+                      alt={image.name} 
+                      className="w-full h-full object-contain"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <h3 className="text-xl font-serif text-center text-secondary/80">{image.name}</h3>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </Container>
+      </main>
+    );
+  }
+
+  if (id === '3') {
+    return (
+      <main className="pt-32 pb-24 min-h-screen">
+        <Container>
+          <div className="mb-12">
+            <FadeIn>
+              <Link to="/projects" className="text-secondary/50 hover:text-accent transition-colors text-xs uppercase tracking-widest mb-6 inline-block">
+                ← Back to Projects
+              </Link>
+              <h1 className="text-4xl md:text-6xl font-serif mb-4">{buildingsProject.title}</h1>
+              <p className="text-accent text-sm uppercase tracking-widest">{buildingsProject.category}</p>
+            </FadeIn>
+          </div>
+          
+          <div className="space-y-24">
+            {buildingsProject.images.map((image, index) => (
+              <FadeIn key={image.name} delay={index * 0.1}>
                 <div className="flex flex-col gap-6">
                   <div className="aspect-video w-full overflow-hidden bg-black/50">
                     <img 

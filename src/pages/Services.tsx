@@ -73,6 +73,13 @@ export function Services() {
                       >
                         View Our Work
                       </Link>
+                    ) : srv.title === "Construction Engineering" ? (
+                      <Link 
+                        to="/projects"
+                        className="inline-block border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors bg-[#111111]/60 backdrop-blur"
+                      >
+                        View Our Work
+                      </Link>
                     ) : (
                       <button className="border border-white/30 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase hover:border-accent hover:text-accent transition-colors bg-[#111111]/60 backdrop-blur">
                         View Our Work

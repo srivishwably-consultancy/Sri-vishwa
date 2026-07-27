@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Target, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Container } from "../components/Container";
 import { FadeIn } from "../components/FadeIn";
@@ -110,62 +110,46 @@ export function Home() {
       <section id="about-us" className="py-32 bg-[#111111] relative">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <FadeIn delay={0.2} direction="right">
-                <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-                  About Us
-                </h4>
-                <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
-                  We shape spaces that inspire living.
-                </h2>
-                <div className="w-16 h-px bg-accent mb-8" />
-                <p className="text-secondary/70 leading-relaxed font-light mb-12 text-lg">
-                  Sri Vishwa Consultancy is a premier design-build contractor
-                  specializing in high-end residential and commercial projects. We
-                  bridge the gap between visionary architectural design and
-                  flawless structural construction, ensuring a seamless journey
-                  from concept to completion.
-                </p>
-                <MagneticButton glowColor="rgba(196, 169, 98, 0.3)">
-                  <AnimatedButton to="/projects">Explore Our Work</AnimatedButton>
-                </MagneticButton>
-              </FadeIn>
-            </div>
-            
-            <FadeIn delay={0.4} direction="perspective">
-              <div className="relative group">
-                {/* Border glow animation on about image */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent via-[#ffdfb0] to-accent rounded-sm blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-                <div className="relative aspect-[4/5] bg-black">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" 
-                    alt="Interior Architecture" 
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-                </div>
-              </div>
+          <div className="max-w-3xl">
+            <FadeIn delay={0.2} direction="right">
+              <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+                About Us
+              </h4>
+              <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
+                We shape spaces that inspire living.
+              </h2>
+              <div className="w-16 h-px bg-accent mb-8" />
+              <p className="text-secondary/70 leading-relaxed font-light mb-12 text-lg">
+                Sri Vishwa Consultancy is a premier design-build contractor
+                specializing in high-end residential and commercial projects. We
+                bridge the gap between visionary architectural design and
+                flawless structural construction, ensuring a seamless journey
+                from concept to completion.
+              </p>
+              <MagneticButton glowColor="rgba(196, 169, 98, 0.3)">
+                <AnimatedButton to="/projects">Explore Our Work</AnimatedButton>
+              </MagneticButton>
             </FadeIn>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-32">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center mt-32">
             {[
-              { num: 15, suffix: "+", label: "Years Experience" },
-              { num: 120, suffix: "+", label: "Projects Delivered" },
+              { num: 18, suffix: " Months+", label: "Experience" },
+              { num: 5, suffix: "+", label: "Design concepts created" },
               { num: 100, suffix: "%", label: "Client Satisfaction" },
-              { num: 25, suffix: "", label: "Design Awards" },
+              { num: 45, suffix: "+", label: "Premium interior concepts" },
             ].map((stat, i) => (
               <FadeIn key={i} delay={0.2 + i * 0.1} direction="up">
                 {/* 3D rotating stat card borders with conic gradients */}
-                <div className="relative p-8 overflow-hidden group">
+                <div className="relative p-4 sm:p-6 md:p-8 overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent rotate-0 group-hover:animate-spin" style={{ animationDuration: '3s' }} />
                   <div className="absolute inset-[1px] bg-[#111111] z-10" />
                   <div className="relative z-20 flex flex-col items-center">
-                    <h5 className="text-white text-5xl font-serif mb-4 flex items-center">
+                    <h5 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-2 sm:mb-4 flex items-center justify-center flex-wrap whitespace-pre-wrap text-center">
                       <Counter from={0} to={stat.num} duration={2 + i * 0.5} />
-                      {stat.suffix}
+                      <span>{stat.suffix}</span>
                     </h5>
-                    <p className="text-secondary/70 text-xs uppercase tracking-widest">
+                    <p className="text-secondary/70 text-[10px] sm:text-xs uppercase tracking-widest text-center">
                       {stat.label}
                     </p>
                   </div>
@@ -176,14 +160,8 @@ export function Home() {
         </Container>
       </section>
 
-      {/* Services Section with Marquee */}
+      {/* Services Section */}
       <section className="py-32 bg-[#0a0a0a] overflow-hidden relative">
-        <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 opacity-5 pointer-events-none z-0">
-          <Marquee speed={30}>
-            <span className="text-9xl font-serif uppercase tracking-tighter">Architecture - Interior - Construction - Design - Build -</span>
-          </Marquee>
-        </div>
-        
         <Container className="relative z-10">
           <FadeIn className="text-center mb-20" direction="down">
             <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
@@ -256,104 +234,63 @@ export function Home() {
         </Container>
       </section>
 
-      {/* Why Choose Us - 3D Orbit */}
+      {/* Vision & Mission */}
       <section className="py-32 bg-[#111111] relative overflow-hidden">
-        <RippleRings />
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        </div>
+        <FloatingParticles count={20} color="rgba(196, 169, 98, 0.15)" />
+        
         <Container className="relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             <FadeIn direction="left">
-              <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-                Why Choose Us
-              </h4>
-              <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
-                Engineering excellence in every detail.
-              </h2>
-              <ul className="space-y-6 mb-8">
-                {[
-                  "Uncompromising Quality Standards",
-                  "Innovative & Sustainable Design",
-                  "Transparent Communication",
-                  "End-to-End Project Management"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-4 text-secondary/80">
-                    <CheckCircle2 className="text-accent shrink-0" size={20} />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <MagneticButton glowColor="rgba(196, 169, 98, 0.3)">
-                <AnimatedButton to="/contact">Get in Touch</AnimatedButton>
-              </MagneticButton>
-            </FadeIn>
-
-            <FadeIn direction="right" delay={0.3}>
-              <div className="relative aspect-square flex items-center justify-center">
-                {/* 3D spinning orbit */}
-                <motion.div 
-                  className="absolute inset-4 rounded-full border border-dashed border-white/20"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                />
-                <motion.div 
-                  className="absolute inset-16 rounded-full border border-white/10"
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                />
-                
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-accent/10 rounded-full flex items-center justify-center backdrop-blur-md border border-accent/30 shadow-[0_0_50px_rgba(212,175,55,0.2)] p-6">
-                    <img 
-                      src="https://res.cloudinary.com/dcm8qwji0/image/upload/f_auto,q_auto/SVC_LOGO_web_2_qduowt" 
-                      alt="Sri Vishwa Logo" 
-                      className="w-full h-auto object-contain brightness-110 filter drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
+              <div className="bg-[#0a0a0a]/80 backdrop-blur-sm p-10 md:p-14 border border-white/5 rounded-2xl h-full flex flex-col items-start group hover:border-accent/30 transition-colors duration-500 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/15 transition-all duration-700 group-hover:scale-150" />
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 shrink-0 relative z-10 group-hover:scale-110 transition-transform duration-500">
+                  <Eye className="text-accent animate-blink" size={32} />
                 </div>
-
-                {/* Orbiting dots/elements */}
-                {[0, 1, 2].map((i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-full h-full"
-                    animate={{ rotate: 360 }}
-                    initial={{ rotate: i * 120 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  >
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full shadow-[0_0_15px_rgba(212,175,55,0.8)]" />
-                  </motion.div>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
-        </Container>
-      </section>
-
-      {/* Floating Image Presentation Section (Suspended depth / parallax) */}
-      <section className="py-32 bg-[#0c0d14] relative overflow-hidden">
-        <FloatingParticles count={15} color="rgba(6, 182, 212, 0.25)" />
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <FadeIn direction="left">
-              <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-                Suspended Architecture
-              </h4>
-              <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
-                Defying Visual Weight with Graceful Proportion
-              </h2>
-              <div className="w-16 h-px bg-accent mb-8" />
-              <p className="text-secondary/70 leading-relaxed font-light mb-8 text-lg">
-                We craft structural works that prioritize visual lightness, using double-height glass volumes, deep cantilevers, and suspended structural elements. Our spaces feel unbound, providing a serene sense of weightlessness and visual fluidity that redefines modern luxury living.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <MagneticButton glowColor="rgba(139, 92, 246, 0.4)">
-                  <AnimatedButton to="/services">View Our Work</AnimatedButton>
-                </MagneticButton>
+                <h3 className="text-3xl font-serif mb-6 text-white relative z-10">Our Vision</h3>
+                <ul className="text-secondary/70 font-light leading-relaxed text-sm space-y-4 list-none relative z-10">
+                  <li className="flex items-start gap-3 group/item">
+                    <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover/item:scale-150 transition-transform" />
+                    <span>Pioneer future-ready construction through continuous technological upgradation.</span>
+                  </li>
+                  <li className="flex items-start gap-3 group/item">
+                    <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover/item:scale-150 transition-transform" />
+                    <span>Establish enduring benchmarks for structural quality and precision.</span>
+                  </li>
+                  <li className="flex items-start gap-3 group/item">
+                    <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover/item:scale-150 transition-transform" />
+                    <span>Shape sustainable, innovative environments for the next generation.</span>
+                  </li>
+                </ul>
               </div>
             </FadeIn>
             
             <FadeIn direction="right" delay={0.2}>
-              <FloatingImages />
+              <div className="bg-[#0a0a0a]/80 backdrop-blur-sm p-10 md:p-14 border border-white/5 rounded-2xl h-full flex flex-col items-start group hover:border-accent/30 transition-colors duration-500 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/15 transition-all duration-700 group-hover:scale-150" />
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 shrink-0 relative z-10 group-hover:scale-110 transition-transform duration-500">
+                  <Target className="text-accent animate-[spin_6s_linear_infinite]" size={32} />
+                </div>
+                <h3 className="text-3xl font-serif mb-6 text-white relative z-10">Our Mission</h3>
+                <ul className="text-secondary/70 font-light leading-relaxed text-sm space-y-4 list-none relative z-10">
+                  <li className="flex items-start gap-3 group/item">
+                    <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover/item:scale-150 transition-transform" />
+                    <span>Bridge imaginative design with meticulous execution.</span>
+                  </li>
+                  <li className="flex items-start gap-3 group/item">
+                    <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover/item:scale-150 transition-transform" />
+                    <span>Deliver projects with complete transparency and speed.</span>
+                  </li>
+                  <li className="flex items-start gap-3 group/item">
+                    <span className="text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover/item:scale-150 transition-transform" />
+                    <span>Build with enduring, high-quality craftsmanship.</span>
+                  </li>
+                </ul>
+              </div>
             </FadeIn>
           </div>
         </Container>
@@ -411,7 +348,7 @@ export function Home() {
                 <Link to="/projects/2" className="group block overflow-hidden bg-white/5 rounded-lg border border-white/10 hover:border-accent/50 transition-colors">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                      src="https://res.cloudinary.com/dcm8qwji0/image/upload/v1784895186/1_cbcvnx.png"
                       alt="Project 2"
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       referrerPolicy="no-referrer"
@@ -421,7 +358,7 @@ export function Home() {
                   <div className="p-8 flex justify-between items-center">
                     <div>
                       <h3 className="text-2xl font-serif mb-2 text-white group-hover:text-accent transition-colors">
-                        Aura Commercial Plaza
+                        Lokur Multi - Specialty Hospital
                       </h3>
                       <p className="text-secondary/50 font-light text-sm uppercase tracking-widest">
                         Commercial
@@ -433,24 +370,6 @@ export function Home() {
               </Card3D>
             </FadeIn>
           </div>
-        </Container>
-      </section>
-
-      {/* Drifting Testimonials Section */}
-      <section className="py-32 bg-[#0e0c15] relative overflow-hidden">
-        <FloatingParticles count={12} color="rgba(196, 169, 98, 0.25)" />
-        <Container>
-          <div className="text-center mb-16">
-            <FadeIn direction="down">
-              <h4 className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-                Testimonials
-              </h4>
-              <h2 className="text-4xl md:text-5xl font-serif">What Our Clients Say</h2>
-            </FadeIn>
-          </div>
-          <FadeIn direction="up" delay={0.2}>
-            <DriftingTestimonials />
-          </FadeIn>
         </Container>
       </section>
 
