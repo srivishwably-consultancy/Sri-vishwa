@@ -145,11 +145,11 @@ export function Home() {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent rotate-0 group-hover:animate-spin" style={{ animationDuration: '3s' }} />
                   <div className="absolute inset-[1px] bg-[#111111] z-10" />
                   <div className="relative z-20 flex flex-col items-center">
-                    <h5 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-2 sm:mb-4 flex items-center justify-center flex-wrap whitespace-pre-wrap text-center">
+                    <h5 className="text-white text-3xl sm:text-4xl md:text-5xl font-serif mb-2 sm:mb-4 flex items-baseline justify-center text-center">
                       <Counter from={0} to={stat.num} duration={2 + i * 0.5} />
-                      <span>{stat.suffix}</span>
+                      <span className="text-lg sm:text-2xl md:text-3xl ml-1">{stat.suffix}</span>
                     </h5>
-                    <p className="text-secondary/70 text-[10px] sm:text-xs uppercase tracking-widest text-center">
+                    <p className="text-secondary/70 text-[10px] sm:text-xs uppercase tracking-widest text-center mt-2 leading-relaxed">
                       {stat.label}
                     </p>
                   </div>
