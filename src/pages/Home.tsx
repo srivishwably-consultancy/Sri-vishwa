@@ -134,22 +134,22 @@ export function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center mt-32">
             {[
-              { num: 18, suffix: " Months+", label: "Experience" },
+              { num: 18, suffix: "+", label: "Months Experience" },
               { num: 5, suffix: "+", label: "Design concepts created" },
               { num: 100, suffix: "%", label: "Client Satisfaction" },
               { num: 45, suffix: "+", label: "Premium interior concepts" },
             ].map((stat, i) => (
               <FadeIn key={i} delay={0.2 + i * 0.1} direction="up">
                 {/* 3D rotating stat card borders with conic gradients */}
-                <div className="relative p-4 sm:p-6 md:p-8 overflow-hidden group">
+                <div className="relative p-3 sm:p-6 md:p-8 overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent rotate-0 group-hover:animate-spin" style={{ animationDuration: '3s' }} />
                   <div className="absolute inset-[1px] bg-[#111111] z-10" />
                   <div className="relative z-20 flex flex-col items-center">
-                    <h5 className="text-white text-3xl sm:text-4xl md:text-5xl font-serif mb-2 sm:mb-4 flex items-baseline justify-center text-center">
+                    <h5 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-2 sm:mb-4 flex flex-row items-baseline justify-center text-center whitespace-nowrap">
                       <Counter from={0} to={stat.num} duration={2 + i * 0.5} />
-                      <span className="text-lg sm:text-2xl md:text-3xl ml-1">{stat.suffix}</span>
+                      <span className="text-base sm:text-xl md:text-3xl ml-0.5 sm:ml-1">{stat.suffix}</span>
                     </h5>
-                    <p className="text-secondary/70 text-[10px] sm:text-xs uppercase tracking-widest text-center mt-2 leading-relaxed">
+                    <p className="text-secondary/70 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest text-center mt-1 sm:mt-2 leading-relaxed">
                       {stat.label}
                     </p>
                   </div>
