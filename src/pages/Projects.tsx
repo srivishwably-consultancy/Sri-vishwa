@@ -5,6 +5,7 @@ import { FadeIn } from '../components/FadeIn';
 import { Card3D } from '../components/Card3D';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../lib/utils';
+import { Folder } from 'lucide-react';
 
 const ALL_PROJECTS = [
   {
@@ -23,14 +24,14 @@ const ALL_PROJECTS = [
     id: '3',
     title: 'Buildings',
     category: 'Residential',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80'
+    image: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1778844481/front1_oac4oz.png'
   }
 ];
 
 const CATEGORIES = ['All', 'Commercial', 'Education', 'Residential'];
 
 export function Projects() {
-  const { id } = useParams();
+  const { id, subfolder } = useParams();
   const [activeCategory, setActiveCategory] = useState('All');
 
   const filteredProjects = ALL_PROJECTS.filter(p => activeCategory === 'All' || p.category === activeCategory);
@@ -83,14 +84,16 @@ export function Projects() {
     ]
   };
 
-  const buildingsProject = {
-    title: 'Buildings',
-    category: 'Residential',
+  const bedroomDesignFolder = {
+    title: 'Bedroom Design',
+    category: 'Buildings / Residential',
     images: [
       { name: 'View 1', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134669/con_ngecwt.png' },
       { name: 'View 2', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134668/side_con_r7mff1.png' },
       { name: 'View 3', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134667/con1_zbdjxo.png' },
-      { name: 'View 4', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134667/pop_work_dps2ek.png' }
+      { name: 'View 4', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134667/pop_work_dps2ek.png' },
+      { name: 'View 5', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785856002/front_ccdcbk.png' },
+      { name: 'View 6', url: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785856005/side_logo_hra3h7.png' }
     ]
   };
 
@@ -167,6 +170,42 @@ export function Projects() {
   }
 
   if (id === '3') {
+    if (subfolder === 'bedroom-design') {
+      return (
+        <main className="pt-32 pb-24 min-h-screen">
+          <Container>
+            <div className="mb-12">
+              <FadeIn>
+                <Link to="/projects/3" className="text-secondary/50 hover:text-accent transition-colors text-xs uppercase tracking-widest mb-6 inline-block">
+                  ← Back to Buildings
+                </Link>
+                <h1 className="text-4xl md:text-6xl font-serif mb-4">{bedroomDesignFolder.title}</h1>
+                <p className="text-accent text-sm uppercase tracking-widest">{bedroomDesignFolder.category}</p>
+              </FadeIn>
+            </div>
+            
+            <div className="space-y-24">
+              {bedroomDesignFolder.images.map((image, index) => (
+                <FadeIn key={image.name} delay={index * 0.1}>
+                  <div className="flex flex-col gap-6">
+                    <div className="aspect-video w-full overflow-hidden bg-black/50">
+                      <img 
+                        src={image.url} 
+                        alt={image.name} 
+                        className="w-full h-full object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                    <h3 className="text-xl font-serif text-center text-secondary/80">{image.name}</h3>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </Container>
+        </main>
+      );
+    }
+
     return (
       <main className="pt-32 pb-24 min-h-screen">
         <Container>
@@ -175,27 +214,30 @@ export function Projects() {
               <Link to="/projects" className="text-secondary/50 hover:text-accent transition-colors text-xs uppercase tracking-widest mb-6 inline-block">
                 ← Back to Projects
               </Link>
-              <h1 className="text-4xl md:text-6xl font-serif mb-4">{buildingsProject.title}</h1>
-              <p className="text-accent text-sm uppercase tracking-widest">{buildingsProject.category}</p>
+              <h1 className="text-4xl md:text-6xl font-serif mb-4">Buildings</h1>
+              <p className="text-accent text-sm uppercase tracking-widest">Residential</p>
             </FadeIn>
           </div>
           
-          <div className="space-y-24">
-            {buildingsProject.images.map((image, index) => (
-              <FadeIn key={image.name} delay={index * 0.1}>
-                <div className="flex flex-col gap-6">
-                  <div className="aspect-video w-full overflow-hidden bg-black/50">
-                    <img 
-                      src={image.url} 
-                      alt={image.name} 
-                      className="w-full h-full object-contain"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                  <h3 className="text-xl font-serif text-center text-secondary/80">{image.name}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FadeIn delay={0.2}>
+              <Link to="/projects/3/bedroom-design" className="group block border border-white/10 hover:border-accent bg-white/5 hover:bg-white/10 transition-all duration-300">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="https://res.cloudinary.com/dcm8qwji0/image/upload/v1785134669/con_ngecwt.png" 
+                    alt="Bedroom Design" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
-              </FadeIn>
-            ))}
+                <div className="p-8">
+                  <h3 className="text-2xl font-serif mb-2 group-hover:text-accent transition-colors">Bedroom Design</h3>
+                  <p className="text-secondary/50 font-light text-sm uppercase tracking-widest flex items-center gap-2">
+                    <Folder size={16} /> Folder • {bedroomDesignFolder.images.length} Views
+                  </p>
+                </div>
+              </Link>
+            </FadeIn>
           </div>
         </Container>
       </main>

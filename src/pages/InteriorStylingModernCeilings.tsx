@@ -12,6 +12,14 @@ export function InteriorStylingModernCeilings() {
     { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784893611/3_cpuc44.png', title: 'Design Concept 3' },
     { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784893611/2_iyaxih.png', title: 'Design Concept 2' },
     { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1784893611/1_g1ctj2.png', title: 'Design Concept 1' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853692/5_i7hj64.png', title: 'Modern Ceiling Concept 10' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853691/3_wuoyr3.png', title: 'Modern Ceiling Concept 11' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853687/4_mhkgu0.png', title: 'Modern Ceiling Concept 12' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853686/6_xonjfn.png', title: 'Modern Ceiling Concept 13' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853686/1_iqolkd.png', title: 'Modern Ceiling Concept 14' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853676/9_biw9lj.png', title: 'Modern Ceiling Concept 15' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853666/8_sydc2j.png', title: 'Modern Ceiling Concept 16' },
+    { src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785853662/2_zmgegb.png', title: 'Modern Ceiling Concept 17' },
   ];
 
   return (
