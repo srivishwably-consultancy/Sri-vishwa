@@ -87,7 +87,7 @@ export function PrivacyPolicy() {
                 </p>
                 <div className="bg-white/5 border border-white/10 p-6 space-y-2 rounded-sm mt-4">
                   <p className="font-semibold text-accent">Sri Vishwa Consultancy</p>
-                  <p><strong>Email:</strong> srivishwably@gmail.com</p>
+                  <p><strong>Email:</strong> srivishwa.co.in@gmail.com</p>
                   <p><strong>Phone:</strong> +91 81055 61005 / +91 80500 43880</p>
                   <p><strong>Office:</strong> Kalika Kamateshwara Complex, Beside Deepak Store, Kalamma Street, Bellary-583101, Karnataka, India.</p>
                 </div>

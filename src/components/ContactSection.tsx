@@ -31,7 +31,7 @@ export function ContactSection() {
                   Direct Contact
                 </h4>
                 <p className="text-secondary/80 font-light">
-                  srivishwably@gmail.com
+                  srivishwa.co.in@gmail.com
                   <br />
                   +91 81055 61005
                   <br />

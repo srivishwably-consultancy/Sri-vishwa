@@ -9,16 +9,12 @@ export function DesignProject4() {
       title: 'Construction & Elevation View'
     },
     {
-      src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785855799/ele_1_xoiwjf.png',
-      title: 'Elevation Visualisation 1'
+      src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1791620608/day_view_ntowlg.png',
+      title: 'Elevation Visualisation Day view'
     },
     {
-      src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785855803/ele_2_pquckg.png',
-      title: 'Elevation Visualisation 2'
-    },
-    {
-      src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1785855806/ele_4_alpgzw.png',
-      title: 'Elevation Visualisation 3'
+      src: 'https://res.cloudinary.com/dcm8qwji0/image/upload/v1791620612/ele_2_namfcy.png',
+      title: 'Elevation Visualisation Night view'
     }
   ];
 
@@ -37,7 +33,7 @@ export function DesignProject4() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectImages.map((img, index) => (
             <FadeIn delay={0.1 + index * 0.1} key={index}>
               <div className="space-y-4">

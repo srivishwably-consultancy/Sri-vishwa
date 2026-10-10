@@ -55,7 +55,7 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.2em] text-secondary/40 font-semibold mb-6">Contact</h4>
             <div className="flex flex-col gap-4 text-sm text-secondary/80">
-              <p>srivishwably@gmail.com</p>
+              <p>srivishwa.co.in@gmail.com</p>
               <p>+91 81055 61005<br/>+91 80500 43880</p>
               <p className="mt-4">Kalika Kamateshwara Complex, Beside Deepak Store,<br/>Kalamma Street, Bellary-583101, Karnataka</p>
             </div>

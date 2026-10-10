@@ -18,6 +18,7 @@ import { DesignProject1 } from './pages/DesignProject1';
 import { DesignProject2 } from './pages/DesignProject2';
 import { DesignProject3 } from './pages/DesignProject3';
 import { DesignProject4 } from './pages/DesignProject4';
+import { DesignProject5 } from './pages/DesignProject5';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 
@@ -54,6 +55,7 @@ export default function App() {
             <Route path="/services/architectural-design/project-2" element={<DesignProject2 />} />
             <Route path="/services/architectural-design/project-3" element={<DesignProject3 />} />
             <Route path="/services/architectural-design/project-4" element={<DesignProject4 />} />
+            <Route path="/services/architectural-design/project-5" element={<DesignProject5 />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<Projects />} />
